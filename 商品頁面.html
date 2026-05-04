@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UN-TAG | Collection</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <style>body{font-family:"Inter",sans-serif}.material-symbols-outlined{font-variation-settings:"FILL" 0,"wght" 400,"GRAD" 0,"opsz" 24}</style>
+</head>
+<body class="bg-[#fff8f5] text-[#311300]" data-page-title="catalog.title">
+  <nav class="fixed top-0 z-50 w-full border-b border-orange-100 bg-orange-50/90 px-6 py-4 shadow-sm backdrop-blur-md">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-6">
+      <a href="首頁.html"><img alt="UN-TAG mark" class="h-16 w-auto object-contain md:h-20" src="images/untag removebg.png"/></a>
+      <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-[#564336]">
+        <a href="首頁.html" data-i18n="nav.home"></a>
+        <a href="商品頁面.html" class="text-[#964900]" data-i18n="nav.collection"></a>
+        <a href="產品理念.html" data-i18n="nav.philosophy"></a>
+        <a href="journal.html" data-i18n="nav.journal"></a>
+        <a href="support.html" data-i18n="nav.support"></a>
+      </div>
+      <div class="flex items-center gap-4">
+        <div data-language-switcher></div>
+        <div class="hidden rounded-full border border-[#ddc1b1] bg-white px-3 py-2 sm:flex sm:items-center">
+          <span class="material-symbols-outlined text-sm text-[#564336]">search</span>
+          <input class="w-40 bg-transparent pl-2 text-sm outline-none" data-i18n-placeholder="catalog.search" data-search-input type="text"/>
+        </div>
+        <a class="relative" href="結帳畫面.html"><span class="material-symbols-outlined">shopping_bag</span><span class="absolute -right-2 -top-2 hidden min-w-5 rounded-full bg-[#964900] px-1.5 py-0.5 text-center text-[10px] font-bold leading-none text-white" data-bag-count>0</span></a>
+        <a href="account.html"><span class="material-symbols-outlined">person</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="mx-auto max-w-7xl px-6 pb-16 pt-28">
+    <header class="mb-12">
+      <h1 class="text-4xl font-extrabold" data-i18n="catalog.heading"></h1>
+      <p class="mt-3 max-w-2xl text-[#564336]" data-i18n="catalog.subheading"></p>
+    </header>
+    <div class="flex flex-col gap-8 lg:flex-row">
+      <aside class="w-full lg:w-64">
+        <div class="sticky top-28 space-y-8 rounded-[28px] bg-white p-6 shadow-sm">
+          <div>
+            <h3 class="mb-4 text-sm font-bold uppercase tracking-wider" data-i18n="catalog.category"></h3>
+            <div class="space-y-2 text-sm text-[#564336]">
+              <label class="flex items-center gap-3"><input checked type="checkbox" data-filter-category="all"/><span data-i18n="catalog.all"></span></label>
+              <label class="flex items-center gap-3"><input type="checkbox" data-filter-category="Outerwear"/><span data-i18n="home.outerwear"></span></label>
+              <label class="flex items-center gap-3"><input type="checkbox" data-filter-category="Knitwear"/><span data-i18n="catalog.knitwear"></span></label>
+              <label class="flex items-center gap-3"><input type="checkbox" data-filter-category="Essentials"/><span data-i18n="home.essentials"></span></label>
+            </div>
+          </div>
+          <div>
+            <h3 class="mb-4 text-sm font-bold uppercase tracking-wider" data-i18n="catalog.size"></h3>
+            <div class="grid grid-cols-4 gap-2">
+              <button class="rounded border border-[#ddc1b1] py-2 text-xs" data-filter-size="XS">XS</button>
+              <button class="rounded border border-[#ddc1b1] py-2 text-xs" data-filter-size="S">S</button>
+              <button class="rounded border border-[#ddc1b1] py-2 text-xs" data-filter-size="M">M</button>
+              <button class="rounded border border-[#ddc1b1] py-2 text-xs" data-filter-size="L">L</button>
+            </div>
+          </div>
+          <div>
+            <h3 class="mb-4 text-sm font-bold uppercase tracking-wider" data-i18n="catalog.palette"></h3>
+            <div class="flex flex-wrap gap-3">
+              <button class="h-8 w-8 rounded-full bg-[#964900]" data-filter-color="Ochre" title="Ochre"></button>
+              <button class="h-8 w-8 rounded-full bg-[#E27512]" data-filter-color="Amber" title="Amber"></button>
+              <button class="h-8 w-8 rounded-full bg-[#FFDCC6]" data-filter-color="Sand" title="Sand"></button>
+              <button class="h-8 w-8 rounded-full bg-[#564336]" data-filter-color="Espresso" title="Espresso"></button>
+            </div>
+          </div>
+          <button class="w-full rounded-full border border-[#964900] px-4 py-3 text-sm font-semibold text-[#964900]" data-clear-filters data-i18n="catalog.clear"></button>
+        </div>
+      </aside>
+
+      <section class="flex-1">
+        <div class="mb-6 flex items-center justify-between gap-4">
+          <span class="text-sm text-[#564336]" id="catalog-count"></span>
+          <div class="flex items-center gap-2">
+            <span class="text-sm font-medium" data-i18n="catalog.sortLabel"></span>
+            <select class="bg-transparent text-sm font-bold text-[#964900] outline-none" id="catalog-sort">
+              <option value="newest" data-i18n="catalog.sort.newest"></option>
+              <option value="price-low" data-i18n="catalog.sort.low"></option>
+              <option value="price-high" data-i18n="catalog.sort.high"></option>
+              <option value="popular" data-i18n="catalog.sort.popular"></option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-3" id="product-grid">
+          <div class="group" data-product-card data-name="Artisan Wool Overcoat" data-description="Limited Edition Camel" data-category="Outerwear" data-price="345" data-rank="1" data-colors="Sand,Ochre" data-sizes="S,M,L">
+            <div class="mb-4 aspect-[3/4] overflow-hidden rounded-[28px] bg-white shadow-sm"><img class="h-full w-full object-cover" src="images/Untitled design.png"/></div>
+            <div class="flex items-start justify-between gap-4"><div><h3 class="text-lg font-bold" data-i18n="product.overcoat"></h3><p class="text-sm text-[#564336]" data-i18n="product.overcoat.desc"></p></div><span class="font-bold text-[#964900]">$345</span></div>
+            <a class="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#964900] px-4 py-3 font-bold text-white" href="結帳畫面.html" data-add-to-cart data-i18n="catalog.quickAdd"></a>
+          </div>
+          <div class="group" data-product-card data-name="Chunky Knit Sweater" data-description="Sustainably Sourced Wool" data-category="Knitwear" data-price="189" data-rank="2" data-colors="Terracotta,Amber" data-sizes="S,M,L,XL">
+            <div class="mb-4 aspect-[3/4] overflow-hidden rounded-[28px] bg-white shadow-sm"><img class="h-full w-full object-cover" src="images/Untitled design.png"/></div>
+            <div class="flex items-start justify-between gap-4"><div><h3 class="text-lg font-bold" data-i18n="product.sweater"></h3><p class="text-sm text-[#564336]" data-i18n="product.sweater.desc"></p></div><span class="font-bold text-[#964900]">$189</span></div>
+            <a class="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#964900] px-4 py-3 font-bold text-white" href="結帳畫面.html" data-add-to-cart data-i18n="catalog.quickAdd"></a>
+          </div>
+          <div class="group" data-product-card data-name="Heritage Leather Jacket" data-description="Premium Espresso Leather" data-category="Outerwear" data-price="520" data-rank="3" data-colors="Espresso" data-sizes="M,L,XL">
+            <div class="mb-4 aspect-[3/4] overflow-hidden rounded-[28px] bg-white shadow-sm"><img class="h-full w-full object-cover" src="images/Untitled design.png"/></div>
+            <div class="flex items-start justify-between gap-4"><div><h3 class="text-lg font-bold" data-i18n="product.leather"></h3><p class="text-sm text-[#564336]" data-i18n="product.leather.desc"></p></div><span class="font-bold text-[#964900]">$520</span></div>
+            <a class="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#964900] px-4 py-3 font-bold text-white" href="結帳畫面.html" data-add-to-cart data-i18n="catalog.quickAdd"></a>
+          </div>
+          <div class="group" data-product-card data-name="Tailored Linen Trousers" data-description="Relaxed Luxury Fit" data-category="Essentials" data-price="165" data-rank="4" data-colors="Ochre,Sand" data-sizes="XS,S,M,L">
+            <div class="mb-4 aspect-[3/4] overflow-hidden rounded-[28px] bg-white shadow-sm"><img class="h-full w-full object-cover" src="images/Untitled design.png"/></div>
+            <div class="flex items-start justify-between gap-4"><div><h3 class="text-lg font-bold" data-i18n="product.trousers"></h3><p class="text-sm text-[#564336]" data-i18n="product.trousers.desc"></p></div><span class="font-bold text-[#964900]">$165</span></div>
+            <a class="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#964900] px-4 py-3 font-bold text-white" href="結帳畫面.html" data-add-to-cart data-i18n="catalog.quickAdd"></a>
+          </div>
+          <div class="group" data-product-card data-name="Essential Tee Set" data-description="Organic Pima Cotton" data-category="Essentials" data-price="85" data-rank="5" data-colors="Amber,Sand" data-sizes="XS,S,M,L,XL">
+            <div class="mb-4 aspect-[3/4] overflow-hidden rounded-[28px] bg-white shadow-sm"><img class="h-full w-full object-cover" src="images/Untitled design.png"/></div>
+            <div class="flex items-start justify-between gap-4"><div><h3 class="text-lg font-bold" data-i18n="product.tee"></h3><p class="text-sm text-[#564336]" data-i18n="product.tee.desc"></p></div><span class="font-bold text-[#964900]">$85</span></div>
+            <a class="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#964900] px-4 py-3 font-bold text-white" href="結帳畫面.html" data-add-to-cart data-i18n="catalog.quickAdd"></a>
+          </div>
+          <div class="group" data-product-card data-name="Classic Trench Coat" data-description="Water-resistant Twill" data-category="Outerwear" data-price="410" data-rank="6" data-colors="Amber,Ochre" data-sizes="S,M,L">
+            <div class="mb-4 aspect-[3/4] overflow-hidden rounded-[28px] bg-white shadow-sm"><img class="h-full w-full object-cover" src="images/Untitled design.png"/></div>
+            <div class="flex items-start justify-between gap-4"><div><h3 class="text-lg font-bold" data-i18n="product.trench"></h3><p class="text-sm text-[#564336]" data-i18n="product.trench.desc"></p></div><span class="font-bold text-[#964900]">$410</span></div>
+            <a class="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#964900] px-4 py-3 font-bold text-white" href="結帳畫面.html" data-add-to-cart data-i18n="catalog.quickAdd"></a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="site-i18n.js"></script>
+  <script src="aura-app.js"></script>
+</body>
+</html>

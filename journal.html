@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UN-TAG | Journal</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+</head>
+<body class="bg-[#fff8f5] text-[#311300]" style="font-family: Inter, sans-serif;" data-page-title="journal.title">
+  <nav class="fixed top-0 z-50 w-full border-b border-orange-100 bg-orange-50/90 px-6 py-4 shadow-sm backdrop-blur-md">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-6">
+      <a href="首頁.html"><img alt="UN-TAG mark" class="h-16 w-auto object-contain md:h-20" src="images/untag removebg.png"/></a>
+      <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-[#564336]">
+        <a href="首頁.html" data-i18n="nav.home"></a>
+        <a href="商品頁面.html" data-i18n="nav.collection"></a>
+        <a href="產品理念.html" data-i18n="nav.philosophy"></a>
+        <a class="text-[#964900]" href="journal.html" data-i18n="nav.journal"></a>
+        <a href="support.html" data-i18n="nav.support"></a>
+      </div>
+      <div class="flex items-center gap-4">
+        <div data-language-switcher></div>
+        <a class="relative" href="結帳畫面.html"><span class="material-symbols-outlined">shopping_bag</span><span class="absolute -right-2 -top-2 hidden min-w-5 rounded-full bg-[#964900] px-1.5 py-0.5 text-center text-[10px] font-bold leading-none text-white" data-bag-count>0</span></a>
+        <a href="account.html"><span class="material-symbols-outlined">person</span></a>
+      </div>
+    </div>
+  </nav>
+  <main class="mx-auto max-w-6xl px-6 py-32">
+    <div class="max-w-3xl">
+      <p class="text-xs font-bold uppercase tracking-[0.35em] text-[#964900]" data-i18n="journal.kicker"></p>
+      <h1 class="mt-4 font-serif text-5xl leading-tight" data-i18n="journal.heading"></h1>
+      <p class="mt-5 text-lg text-[#564336]" data-i18n="journal.subheading"></p>
+    </div>
+    <section class="mt-14 grid gap-8 md:grid-cols-3">
+      <article class="rounded-[28px] bg-white p-6 shadow-sm ring-1 ring-[#ddc1b1]"><p class="text-xs font-bold uppercase tracking-[0.3em] text-[#964900]" data-i18n="journal.a1cat"></p><h2 class="mt-4 text-2xl font-black" data-i18n="journal.a1title"></h2><p class="mt-4 text-sm leading-7 text-[#564336]" data-i18n="journal.a1body"></p></article>
+      <article class="rounded-[28px] bg-white p-6 shadow-sm ring-1 ring-[#ddc1b1]"><p class="text-xs font-bold uppercase tracking-[0.3em] text-[#964900]" data-i18n="journal.a2cat"></p><h2 class="mt-4 text-2xl font-black" data-i18n="journal.a2title"></h2><p class="mt-4 text-sm leading-7 text-[#564336]" data-i18n="journal.a2body"></p></article>
+      <article class="rounded-[28px] bg-white p-6 shadow-sm ring-1 ring-[#ddc1b1]"><p class="text-xs font-bold uppercase tracking-[0.3em] text-[#964900]" data-i18n="journal.a3cat"></p><h2 class="mt-4 text-2xl font-black" data-i18n="journal.a3title"></h2><p class="mt-4 text-sm leading-7 text-[#564336]" data-i18n="journal.a3body"></p></article>
+    </section>
+  </main>
+  <script src="site-i18n.js"></script>
+  <script src="aura-app.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UN-TAG | Order Confirmed</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+</head>
+<body class="bg-[#fff8f5] px-6 text-[#311300]" style="font-family: Inter, sans-serif;" data-page-title="success.title">
+  <nav class="fixed top-0 z-50 w-full border-b border-orange-100 bg-orange-50/90 px-6 py-4 shadow-sm backdrop-blur-md">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-6">
+      <a href="首頁.html"><img alt="UN-TAG mark" class="h-16 w-auto object-contain md:h-20" src="images/untag removebg.png"/></a>
+      <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-[#564336]">
+        <a href="首頁.html" data-i18n="nav.home"></a>
+        <a href="商品頁面.html" data-i18n="nav.collection"></a>
+        <a href="產品理念.html" data-i18n="nav.philosophy"></a>
+        <a href="journal.html" data-i18n="nav.journal"></a>
+        <a href="support.html" data-i18n="nav.support"></a>
+      </div>
+      <div class="flex items-center gap-4">
+        <div data-language-switcher></div>
+        <a class="relative" href="結帳畫面.html"><span class="material-symbols-outlined">shopping_bag</span><span class="absolute -right-2 -top-2 hidden min-w-5 rounded-full bg-[#964900] px-1.5 py-0.5 text-center text-[10px] font-bold leading-none text-white" data-bag-count>0</span></a>
+        <a href="account.html"><span class="material-symbols-outlined">person</span></a>
+      </div>
+    </div>
+  </nav>
+  <main class="flex min-h-screen items-center justify-center pt-32">
+    <div class="w-full max-w-2xl rounded-[32px] bg-white p-10 text-center shadow-2xl ring-1 ring-[#ddc1b1]">
+      <p class="text-xs font-bold uppercase tracking-[0.35em] text-[#964900]" data-i18n="success.kicker"></p>
+      <h1 class="mt-4 text-5xl font-black" data-i18n="success.heading"></h1>
+      <p class="mt-5 text-lg text-[#564336]" data-i18n="success.body"></p>
+      <div class="mt-8 rounded-3xl bg-[#fff8f5] px-6 py-5">
+        <p class="text-sm uppercase tracking-[0.3em] text-[#964900]" data-i18n="success.total"></p>
+        <p class="mt-3 text-4xl font-black" id="order-total">$0.00</p>
+        <p class="mt-3 text-sm text-[#564336]" id="order-meta">0 item(s)</p>
+      </div>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a class="rounded-full bg-[#964900] px-6 py-3 text-sm font-bold uppercase tracking-widest text-white" href="首頁.html" data-i18n="success.backHome"></a>
+        <a class="rounded-full border border-[#964900] px-6 py-3 text-sm font-bold uppercase tracking-widest text-[#964900]" href="商品頁面.html" data-i18n="success.continue"></a>
+      </div>
+    </div>
+  </main>
+  <script src="site-i18n.js"></script>
+  <script src="aura-app.js"></script>
+</body>
+</html>
